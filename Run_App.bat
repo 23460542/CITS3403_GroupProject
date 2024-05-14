@@ -3,4 +3,7 @@
 call venv\Scripts\activate
 
 :: Run Flask
-flask run
+start "" flask run
+
+:: Open browser to localhost:5000
+start "" http://localhost:5000
