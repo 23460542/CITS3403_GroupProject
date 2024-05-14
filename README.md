@@ -14,4 +14,5 @@ This web application is a simple forum designed for users to seek help from the 
 The frontend is built with HTML, CSS, and JavaScript along with the Bootstrap 5 framework to ensure responsiveness and interactivity while having a modern design. The backend is developed using Flask, utilizing various librariries such as SQLAlchemy and WTForms. The application follows Agile methodology.
 
 ## Launch Instructions
-..to be updated
+1. Clone the repository using git clone or VSCode.
+2. Double-click on Run_App.bat
