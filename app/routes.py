@@ -16,7 +16,7 @@ def login():
         return redirect(url_for('index'))
     return render_template('loginPage.html', form=form)
 
-@app.route('/signup')
+@app.route('/signup', methods=['GET', 'POST'])
 def signup():
     form = SignUpForm()
     if form.validate_on_submit():
