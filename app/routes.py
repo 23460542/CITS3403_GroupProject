@@ -7,8 +7,6 @@ from app.forms import *
 def index():
     return render_template('welcomePage.html')
 
-@app.route('/login')
-
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
