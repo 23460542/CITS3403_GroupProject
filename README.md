@@ -16,3 +16,4 @@ The frontend is built with HTML, CSS, and JavaScript along with the Bootstrap 5 
 ## Launch Instructions
 1. Clone the repository using git clone or VSCode.
 2. Double-click on Run_App.bat
+
