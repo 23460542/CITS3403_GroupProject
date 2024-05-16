@@ -17,6 +17,6 @@ The frontend is built with HTML, CSS, and JavaScript along with the Bootstrap 5 
 1. Clone the git repository and open the folder.
 2. Open a terminal and run `python -m venv venv` (make sure you have python installed)
 3. Run `venv\Scripts\Activate.ps1` in terminal to activate the virtual environment.
-4. Install the following python dependencies - flask, python-dotenv, flask-wtf, flask-sqlalchemy, flask-migrate, flask-login (use pip install <package-name>)
+4. Install the following python dependencies in the virtual environment - flask, python-dotenv, flask-wtf, flask-sqlalchemy, flask-migrate, flask-login (use pip install <package-name>)
 5. Use Run_App.bat to run the app.
 
