@@ -24,3 +24,13 @@ def signup():
             form.username.data))
         return redirect(url_for('index'))
     return render_template('signUpPage.html', form=form)
+
+@app.route('/post', methods=['GET', 'POST'])
+def post():
+    form = PostForm()
+    if form.validate_on_submit():
+        title = form.title.data
+        body = form.body.data
+        flash(f'Title: {title}, Body: {body}', 'success')
+        return redirect(url_for('index'))
+    return render_template('newPost.html', form=form)
