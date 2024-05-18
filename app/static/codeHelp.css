@@ -1,0 +1,13 @@
+.text-gray {
+    color: gray;
+}
+
+body {
+    background-color: #ffffff;
+    color: #212529;
+}
+
+body.dark-theme {
+    background-color: #000b16;
+    color: #ffffff;
+}

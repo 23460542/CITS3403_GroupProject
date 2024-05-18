@@ -25,10 +25,8 @@
                     <label for="confirm_password">Confirm Password</label>
                     {{ form.password2(class="form-control", id="password2", placeholder="Confirm Password") }}
                   </div>
-                <div class="form-group">
-                  <div class="row mx-1 mt-4">
-                      {{ form.submit(class="btn btn-dark rounded text-white") }}
-                  </div>
+                  <div class="form-group d-grid mt-2">
+                      {{ form.submit(class="btn btn-block btn2 btn-dark rounded") }}
                 </div>
               </form>
           </div>
@@ -40,7 +38,7 @@
             <h5 class="card-title text-center">Already have an account?</h5>
             <p class="card-text text-center">Login to your existing account</p>
             <div class="text-center">
-                <a href="{{ url_for('login') }}" type="button" class="btn btn-login btn-dark rounded text-white">Login</a>
+                <a href="{{ url_for('login') }}" type="button" class="btn btn2 btn-login btn-dark rounded">Login</a>
             </div>
           </div>
         </div>

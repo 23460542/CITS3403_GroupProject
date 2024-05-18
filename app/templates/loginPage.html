@@ -17,10 +17,8 @@
                   <label for="password">Password</label>
                   {{ form.password(class="form-control", id="password", placeholder="Password") }}
                 </div>
-                <div class="form-group">
-                  <div class="row mx-1 mt-4">
-                      {{ form.submit(class="btn btn-dark rounded text-white") }}
-                  </div>
+                <div class="form-group d-grid mt-2">
+                      {{ form.submit(class="btn btn-block btn2 btn-dark rounded") }}
                 </div>
               </form>
           </div>
@@ -32,7 +30,7 @@
             <h5 class="card-title text-center">Don't have an account?</h5>
             <p class="card-text text-center">Sign Up to create an account.</p>
             <div class="text-center">
-              <a href="{{ url_for('signup') }}" type="button" class="btn btn-dark rounded text-white">Sign Up</a>
+              <a href="{{ url_for('signup') }}" type="button" class="btn btn2 btn-dark rounded">Sign Up</a>
             </div>
         </div>
     </div>
