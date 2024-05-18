@@ -23,4 +23,5 @@ The frontend is built with HTML, CSS, and JavaScript along with the Bootstrap 5 
 2. Run `chmod +x setup_unix.sh` then run setup_unix.sh
 3. Activate virtual environment using `source venv/bin/activate`.
 4. Run app using `flask run`.
+5. Open http://localhost:5000 in browser.
 
