@@ -5,6 +5,7 @@ from flask_login import current_user, login_user, logout_user, login_required
 import sqlalchemy as sa
 from app import db
 from app.models import User, Post, Comment
+from sqlalchemy import desc
 
 @app.route('/')
 @app.route('/index')
@@ -57,13 +58,13 @@ def newPost():
 
 @app.route('/viewPosts')
 def viewPosts():
-    posts = Post.query.all()
+    posts = Post.query.order_by(desc(Post.timestamp)).all()
     return render_template('viewPosts.html', posts=posts)
 
 @app.route('/post/<int:post_id>', methods=['GET', 'POST'])
 def postDetails(post_id):
     post = Post.query.get_or_404(post_id)
-    comments = Comment.query.filter_by(post_id=post_id).all()
+    comments = Comment.query.filter_by(post_id=post_id).order_by(desc(Comment.timestamp)).all()
     form = CommentForm()
 
     if form.validate_on_submit():
