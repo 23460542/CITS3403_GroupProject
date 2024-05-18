@@ -21,6 +21,11 @@
                 <h1>codeHelp</h1>
             </div>
             <div class="col-md-3 d-flex">
+                {% if current_user.is_authenticated %}
+                <p>Welcome, {{ current_user.username }}!</p>
+                {% else %}
+                <p>Test_no_user</p>
+                {% endif %}
             </div>
             <div class="col-md-1 d-flex align-items-center justify-content-center">
                 <a href="{{ url_for('index') }}" type="button" class="btn btn-home text-black">Home</a>
@@ -31,8 +36,13 @@
             <div class="col-md-1 d-flex align-items-center justify-content-center">
                 <button type="button" class="btn btn-questions text-black">Questions</button>
             </div>
+
             <div class="col-md-1 d-flex align-items-center justify-content-center">
+                {% if current_user.is_anonymous %}
                 <a href="{{ url_for('login') }}" type="button" class="btn btn-login btn-dark rounded text-white">Login</a>
+                {% else %}
+                <a href="{{ url_for('logout') }}" type="button" class="btn btn-login btn-dark rounded text-white">Logout</a>
+                {% endif %}
             </div>
         </div>
     </div>
