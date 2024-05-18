@@ -11,7 +11,7 @@ This web application is a simple forum designed for users to seek help from the 
 | 24000581  | Ashraf Qureshi         | https://github.com/ash-6666     |
 
 ## Architecture Summary
-The frontend is built with HTML, CSS, and JavaScript along with the Bootstrap 5 framework to ensure responsiveness and interactivity while having a modern design. The backend is developed using Flask, utilizing various librariries such as SQLAlchemy and WTForms. The application follows Agile methodology.
+The frontend is built with HTML, CSS, and JavaScript along with the Bootstrap 5 framework to ensure responsiveness and interactivity while having a modern design. The backend is developed using Flask, utilizing Jinja, JQuery, SQLAlchemy and WTForms. The application development follows Agile methodology.
 
 ## Launch Instructions (Windows)
 1. Clone the git repository and open the folder.
