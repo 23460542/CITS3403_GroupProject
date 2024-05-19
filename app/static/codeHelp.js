@@ -32,3 +32,12 @@ $(document).ready(function() {
         enableLightTheme();
     }
 });
+
+function profMenuToggle() {
+    if (document.getElementById("prof-menu").className == "hidden") {
+        document.getElementById("prof-menu").classList.remove("hidden");
+    }
+    else {
+        document.getElementById("prof-menu").className = "hidden";
+    }
+  }

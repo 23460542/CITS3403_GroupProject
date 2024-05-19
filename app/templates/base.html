@@ -33,7 +33,7 @@
                 {% endif %}
             </div>
             <div class="col-md-1 d-flex align-items-center justify-content-center">
-                <a href="{{ url_for('index') }}" type="button" class="btn btn-home">jome</a>
+                <a href="{{ url_for('index') }}" type="button" class="btn btn-home">Home</a>
             </div>
             <div class="col-md-1 d-flex align-items-center justify-content-center">
                 <a href="{{ url_for('newPost') }}" class="btn btn-ask">Ask</a>
@@ -46,10 +46,17 @@
                 {% if current_user.is_anonymous %}
                 <a href="{{ url_for('login') }}" type="button" class="btn btn2 btn-login btn-dark rounded">Login</a>
                 {% else %}
-                <a href="{{ url_for('logout') }}" type="button" class="btn btn2 btn-login btn-dark rounded">Logout</a>
+                <a onclick="profMenuToggle()" type="button" class="btn btn2 btn-login btn-dark rounded">{{ current_user.username }}</a>
                 {% endif %}
             </div>
         </div>
+    </div>
+
+    <div id="prof-menu" class="hidden">
+        <ul>
+            <li><a href="{{ url_for('profile', user_id=current_user.id) }}">Profile</a></li>
+            <li><a href="{{ url_for('logout')  }}">Logout</a></li>
+        </ul>
     </div>
 
     <div id="content">

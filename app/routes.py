@@ -76,3 +76,9 @@ def postDetails(post_id):
         return redirect(url_for('postDetails', post_id=post_id))
 
     return render_template('postDetails.html', post=post, form=form, comments=comments)
+
+@app.route('/profile/<int:user_id>')
+def profile(user_id):
+    posts = Post.query.filter_by(user_id=user_id).order_by(desc(Post.timestamp)).all()
+    user = User.query.get_or_404(user_id)
+    return render_template('profilePage.html', posts=posts, user=user)

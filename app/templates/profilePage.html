@@ -5,18 +5,8 @@
    
     <div class="row">
         <div class="col-md-3 p-3 text-black">
-            <img src="profile-pic.jpg" alt="Profile Picture">
-            <h2>Account name</h2></div>
-        <div class="col-md-6 p-3  text-black"></div>
-        <div class="col-md-1 p-3  text-black">Likes: <span id="likes-count">0</span></div>
-        <div class="col-md-1 p-3  text-black">Dislikes: <span id="dislikes-count">0</span></div>
-        <div class="col-md-1 p-3  text-black">
-            <select name="Language"> 
-                <option value="All">All</option>
-                <option value="Python">Python</option>
-                <option value="JavaScript">JavaScript</option>
-                <option value="HTML">HTML</option>
-            </select>
+            <img src="{{ url_for('static', filename='profile_pic.svg') }}" alt="Profile Picture" class="border rounded" style="width: 50px;">
+            <h2>{{ user.username }}</h2></div>
         </div>
     </div>
 </div>   
@@ -25,8 +15,16 @@
 
 <div class="container p-3 my-2 border">
     <div class="row border my-4">Recent Activity</div>
-    <div class="row border my-2 post-placeholder">Post Placeholder #1 <br> <br> </div>
-    <div class="row border my-2 post-placeholder">Post Placeholder #2 <br> <br> </div>
-    <div class="row border my-2 post-placeholder">Post Placeholder etc.. <br> <br> </div>
+    {% for post in posts %}
+    <div class="card mb-3">
+        <div class="card-header">
+            <strong>question asked on {{post.timestamp}}</strong>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title"><a href="{{ url_for('postDetails', post_id=post.id) }}">{{ post.title }}</a></h5>
+            <p class="card-text">{{ post.body }}</p>
+        </div>
+    </div>
+    {% endfor %}
 </div>
 {% endblock %}

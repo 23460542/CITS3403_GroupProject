@@ -11,3 +11,7 @@ body.dark-theme {
     background-color: #000b16;
     color: #ffffff;
 }
+
+.hidden {
+    display: none;
+}
