@@ -25,13 +25,6 @@
                 <img src="{{ url_for('static', filename='logo.svg') }}" alt="" style="width: 50px; margin-right: 10px;">
                 <h1>codeHelp</h1>
             </div>
-            <div class="col-md-3 d-flex">
-                {% if current_user.is_authenticated %}
-                <p>Welcome, {{ current_user.username }}!</p>
-                {% else %}
-                <p>Test_no_user</p>
-                {% endif %}
-            </div>
             <div class="col-md-1 d-flex align-items-center justify-content-center">
                 <a href="{{ url_for('index') }}" type="button" class="btn btn-home">Home</a>
             </div>
