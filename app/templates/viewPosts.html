@@ -8,7 +8,7 @@
         {% for post in posts %}
         <div class="card mb-3">
             <div class="card-header">
-                <strong>{{ post.author.username }} asked on {{post.timestamp}}</strong>
+                <strong><a href="{{ url_for('profile', user_id=post.author.id) }}">{{ post.author.username }}</a> asked on {{post.timestamp}}</strong>
             </div>
             <div class="card-body">
                 <h5 class="card-title"><a href="{{ url_for('postDetails', post_id=post.id) }}">{{ post.title }}</a></h5>
