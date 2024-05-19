@@ -15,8 +15,10 @@ The frontend is built with HTML, CSS, and JavaScript along with the Bootstrap 5 
 
 ## Launch Instructions (Windows)
 1. Clone the git repository and open the folder.
-2. Run setup_windows.bat
-3. Use Run_App.bat to run the app.
+2. Install Python if you dont have it installed.
+3. Delete the \venv folder.
+4. Run setup_windows.bat.
+5. Use Run_App.bat to run the app.
 
 ## Launch Instructions (Linux/Other Unix based OS)
 1. Clone the git repository and open the folder.
