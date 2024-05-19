@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container p-2 my-5 bg-white text-black border">
+<div class="container p-2 my-5 bg-white text-black">
     <div class="row">
         <div class="col d-flex flex-column align-items-center">
             <h1 class="text-center text-bold">A Developer Forum <br> for the AI Age</h1>
@@ -9,5 +9,8 @@
             <a href="{{ url_for('signup') }}" type="button" class="btn btn2 btn-dark rounded">Sign Up Now</a>
         </div>
     </div>
+</div>
+<div id="hero_img">
+    <img src="{{ url_for('static', filename='background_hero.png') }}" alt="" id="hero_img">
 </div>
 {% endblock %}

@@ -11,3 +11,19 @@ body.dark-theme {
     background-color: #000b16;
     color: #ffffff;
 }
+
+.hidden {
+    display: none;
+}
+
+#hero_img {
+    position: fixed;
+    right:200px;
+    overflow: hidden;
+}
+
+#hero_img img {
+    right: -10%;
+    width: 600px;
+    bottom: -30%;
+}

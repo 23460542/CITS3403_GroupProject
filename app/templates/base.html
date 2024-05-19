@@ -19,20 +19,14 @@
 
 <body>
 <!-- Header for all pages -->
-    <div class="container p-2 my-1">
+    <div class="container p-2 my-1" style="margin-right: 0;">
         <div class="row">
             <div class="col-md-5 d-flex">
+                <img src="{{ url_for('static', filename='logo.svg') }}" alt="" style="width: 50px; margin-right: 10px;">
                 <h1>codeHelp</h1>
             </div>
-            <div class="col-md-3 d-flex">
-                {% if current_user.is_authenticated %}
-                <p>Welcome, {{ current_user.username }}!</p>
-                {% else %}
-                <p>Test_no_user</p>
-                {% endif %}
-            </div>
             <div class="col-md-1 d-flex align-items-center justify-content-center">
-                <a href="{{ url_for('index') }}" type="button" class="btn btn-home">jome</a>
+                <a href="{{ url_for('index') }}" type="button" class="btn btn-home">Home</a>
             </div>
             <div class="col-md-1 d-flex align-items-center justify-content-center">
                 <a href="{{ url_for('newPost') }}" class="btn btn-ask">Ask</a>
@@ -45,10 +39,21 @@
                 {% if current_user.is_anonymous %}
                 <a href="{{ url_for('login') }}" type="button" class="btn btn2 btn-login btn-dark rounded">Login</a>
                 {% else %}
-                <a href="{{ url_for('logout') }}" type="button" class="btn btn2 btn-login btn-dark rounded">Logout</a>
+                <a onclick="profMenuToggle()" type="button" class="btn btn2 btn-login btn-dark rounded">{{ current_user.username }}</a>
                 {% endif %}
             </div>
         </div>
+    </div>
+
+    <div id="prof-menu" class="hidden">
+        <ul>
+            {% if current_user.is_authenticated %}
+            <li><a href="{{ url_for('profile', user_id=current_user.id) }}">Profile</a></li>
+            {% else %}
+            <li>Not Logged in</li>
+            {% endif %}
+            <li><a href="{{ url_for('logout')  }}">Logout</a></li>
+        </ul>
     </div>
 
     <div id="content">

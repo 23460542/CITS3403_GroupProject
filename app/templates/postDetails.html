@@ -4,7 +4,7 @@
 <div class="container p-2 my-2">
     <div class="card mb-3">
         <div class="card-header">
-            <strong>{{ post.author.username }} asked on {{post.timestamp}}</strong>
+            <strong><a href="{{ url_for('profile', user_id=post.author.id) }}">{{ post.author.username }}</a> asked on {{post.timestamp}}</strong>
         </div>
         <div class="card-body">
             <h5 class="card-title">{{ post.title }}</h5>
